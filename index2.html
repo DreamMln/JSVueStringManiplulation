@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String manipulation</h1>
+    <div id="app">
+        <input type="text" v-model="word" placeholder="type something..." >
+
+        <button v-on:click="Button(word)" type="button">Show it!</button>
+        <div>{{ message }}</div>
+            <ul v-if="words.length > 0">
+                <li class="styleColor" v-for="word in words">
+                    {{word}}
+                </li>
+            </ul>
+
+            <table class="tabel" width="50%">
+                <tbody>
+                    <tr class="active" v-for="word in words">
+                        <td>{{word}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="index2.js"></script>
+
+</body>
+</html>
